@@ -22,6 +22,12 @@ The easiest way to install Loverboy is using [LuaRocks](https://luarocks.org/):
 $ luarocks install loverboy
 ```
 
+You'll also need the metafiles that describe the libraries available to Loverboy:
+
+```
+$ git clone https://github.com/ngscheurich/loverboy-mfiles.git ~/.local/share/loverboy
+```
+
 ## Usage
 
 ```
@@ -40,6 +46,7 @@ OPTIONS:
 ## Roadmap
 
 - [ ] Install multi-file libraries, e.g., [hump](https://github.com/vrld/hump), to their own subdirectory
+- [ ] Consolidate installation of Loverboy and metafiles
 
 ## Contributing
 
