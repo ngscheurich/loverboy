@@ -14,8 +14,10 @@ cli:argument("NAME", "name of library to get info about")
 local args, err = cli:parse(arg)
 if not args and err then
   print(err .. "\n")
-  cli:print_help()
   os.exit(1)
+elseif args then
+  cli:print_help()
+  os.exit(0)
 end
 
 name = args["NAME"]
