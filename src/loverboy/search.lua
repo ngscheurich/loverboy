@@ -25,7 +25,7 @@ if not args and err then
   os.exit(1)
 end
 
-util.print_bold("==> Searching local mfiles...")
+util.print_bold("==> Searching local metafiles...")
 
 term = args["TERM"]
 
