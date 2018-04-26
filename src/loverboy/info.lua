@@ -1,5 +1,5 @@
 local cli = require "cliargs"
-local util = require "src.loverboy.util"
+local util = require "loverboy.util"
 
 local lib = nil
 
@@ -13,6 +13,7 @@ cli:argument("NAME", "name of library to get info about")
 
 local args, err = cli:parse(arg)
 if not args and err then
+  print(err .. "\n")
   cli:print_help()
   os.exit(1)
 end

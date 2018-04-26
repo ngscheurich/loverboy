@@ -1,28 +1,26 @@
+package.path = package.path .. ";src/?.lua"
+
 local cli = require "cliargs"
+local util = require "loverboy.util"
 
 local function print_version()
-  print("loverboy.lua: version 0.1.0")
-  print("lua_cliargs: version " .. cli.VERSION)
+  print("loverboy version 0.1.0")
   os.exit(0)
 end
 
 cli:set_name("loverboy")
-
-cli
-  :command("add", "add a library to the current project")
-  :file("src/loverboy/add.lua")
-cli
-  :command("info", "display information about a library")
-  :file("src/loverboy/info.lua")
-cli
-  :command("search", "search available libraries")
-  :file("src/loverboy/search.lua")
-
-cli:flag("-v, --version", "prints the program's version", print_version)
+cli:command("add", "Add a library to the current project"):file(util.abspath("add"))
+cli:command("info", "Display information about a library"):file(util.abspath("info"))
+cli:command("search", "Search available libraries"):file(util.abspath("search"))
+cli:flag("-v, --version", "Prints the program's version", print_version)
 
 local args, err = cli:parse(arg)
 
 if not args and err then
-  print(err)
+  print(err .. "\n")
+  cli:print_help()
   os.exit(1)
+elseif args then
+  cli:print_help()
+  os.exit(0)
 end

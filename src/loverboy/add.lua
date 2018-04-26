@@ -1,5 +1,5 @@
 local cli = require "cliargs"
-local util = require "src.loverboy.util"
+local util = require "loverboy.util"
 
 local lib = nil
 
@@ -15,6 +15,7 @@ cli:option("-d, --directory=DIRECTORY", "directory in which to add the library",
 
 local args, err = cli:parse(arg)
 if not args and err then
+  print(err .. "\n")
   cli:print_help()
   os.exit(1)
 end

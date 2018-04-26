@@ -1,5 +1,5 @@
 local cli = require "cliargs"
-local util = require "src.loverboy.util"
+local util = require "loverboy.util"
 
 local results = {}
 
@@ -20,11 +20,12 @@ cli:flag("-n, --name", "only search in names", false)
 
 local args, err = cli:parse(arg)
 if not args and err then
+  print(err .. "\n")
   cli:print_help()
   os.exit(1)
 end
 
-print("==> Searching local mfiles...")
+util.print_bold("==> Searching local mfiles...")
 
 term = args["TERM"]
 
