@@ -11,28 +11,40 @@ Loverboy makes it easy to add Lua libraries to your [LÖVE](https://love2d.org/)
   * [Installation](#installation)
   * [Usage](#usage)
   * [Roadmap](#roadmap)
-  * [Development](#development)
+  * [Contributing](#contributing)
   * [License](#license)
 
 ## Installation
 
 The easiest way to install Loverboy is using [LuaRocks](https://luarocks.org/):
 
-```shell
+```
 $ luarocks install loverboy
 ```
 
 ## Usage
 
-THere 
+```
+Usage: loverboy [OPTIONS]
+
+COMMANDS:
+  add           Add a library to the current project
+  info          Display information about a library
+  search        Search available libraries
+  update        Update local metafiles cache
+
+OPTIONS:
+  -v, --version Prints the program's version
+```
 
 ## Roadmap
 
-TODO: Add roadmap section
+- [ ] Install multi-file libraries, e.g., [hump](https://github.com/vrld/hump), to their own subdirectory
 
-## Development
+## Contributing
 
-TODO: Add development section
+PRs are welcome—just be sure and adhere to the
+[code of conduct](https://github.com/ngscheurich/loverboy-mfiles/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
