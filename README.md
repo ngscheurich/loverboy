@@ -44,7 +44,7 @@ OPTIONS:
 ## Contributing
 
 PRs are welcome—just be sure and adhere to the
-[code of conduct](https://github.com/ngscheurich/loverboy-mfiles/blob/master/CODE_OF_CONDUCT.md).
+[code of conduct](https://github.com/ngscheurich/loverboy/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
