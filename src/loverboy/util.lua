@@ -1,7 +1,6 @@
 local lfs = require"lfs"
 local request = require "http.request"
 
-local MFILES_PATH = os.getenv("HOME") .. "/.local/share/loverboy/mfiles"
 package.path = package.path .. ";" .. MFILES_PATH .. "/?.lua"
 
 local util ={}
