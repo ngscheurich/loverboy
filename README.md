@@ -47,7 +47,8 @@ OPTIONS:
 ## Roadmap
 
 * [x] Install multi-file libraries, e.g., [hump](https://github.com/vrld/hump), to their own subdirectory
-* [ ] Consolidate installation of Löverboy and metafiles
+* [x] Consolidate installation of Löverboy and metafiles
+* [ ] Let user select a subset of files from a multi-file library
 
 ## Contributing
 
