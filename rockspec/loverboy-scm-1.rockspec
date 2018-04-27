@@ -2,7 +2,7 @@ package = "loverboy"
 version = "scm-1"
 
 source = {
-   url = "https://github.com/ngscheurich/loverboy.git"
+   url = "git://github.com/ngscheurich/loverboy.git"
 }
 
 description = {
