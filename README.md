@@ -55,8 +55,8 @@ OPTIONS:
 PRs are welcome—just be sure and adhere to the
 [code of conduct](https://github.com/ngscheurich/loverboy/blob/master/CODE_OF_CONDUCT.md).
 
-Is your favorite library not available? You’ll want to have a look at
-[loverboy-mfiles](https://github.com/ngscheurich/loverboy-mfiles).
+Is your favorite library not available? You’ll want to have a look at the
+[Löverboy Metafiles repo](https://github.com/ngscheurich/loverboy-mfiles).
 
 ## License
 
