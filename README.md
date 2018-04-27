@@ -1,8 +1,8 @@
-# 💘 Loverboy
+# 💘 Löverboy
 
 > I learned my passion in the good old-fashioned school of lover boys
 
-Loverboy makes it easy to add Lua libraries to your LÖVE project with a simple set of commands.
+Löverboy makes it easy to add Lua libraries to your LÖVE project with a simple set of commands.
 Library files are added directly to your project directory so distributing your game is a snap.
 
 ## Table of contents
@@ -17,13 +17,13 @@ Library files are added directly to your project directory so distributing your 
 
 ## Installation
 
-The easiest way to install Loverboy is using [LuaRocks](https://luarocks.org/):
+The easiest way to install Löverboy is using [LuaRocks](https://luarocks.org/):
 
 ```
 $ luarocks install loverboy
 ```
 
-You’ll also need the metafiles that describe the libraries available to Loverboy:
+You’ll also need the metafiles that describe the libraries available to Löverboy:
 
 ```
 $ git clone https://github.com/ngscheurich/loverboy-mfiles.git ~/.local/share/loverboy
@@ -46,8 +46,8 @@ OPTIONS:
 
 ## Roadmap
 
-- [ ] Install multi-file libraries, e.g., [hump](https://github.com/vrld/hump), to their own subdirectory
-- [ ] Consolidate installation of Loverboy and metafiles
+* [x] Install multi-file libraries, e.g., [hump](https://github.com/vrld/hump), to their own subdirectory
+* [ ] Consolidate installation of Löverboy and metafiles
 
 ## Contributing
 
@@ -59,4 +59,4 @@ Is your favorite library not available? You’ll want to have a look at
 
 ## License
 
-Loverboy is released under the [MIT license](https://github.com/ngscheurich/loverboy/blob/master/LICENSE).
+Löverboy is released under the [MIT license](https://github.com/ngscheurich/loverboy/blob/master/LICENSE).
