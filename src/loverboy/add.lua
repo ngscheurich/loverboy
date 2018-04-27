@@ -1,11 +1,26 @@
 local cli = require "cliargs"
 local util = require "loverboy.util"
 
-local lib = nil
+local lib
+local base_dir
+local lib_dir
+local version
 
 local function search_names(term)
   local mdata = util.mdata_with_name(term)
   for _, md in ipairs(mdata) do lib = md end
+end
+
+local function recursiveDownload(files)
+  for k, v in pairs(files) do
+    if type(v) == "table" then
+      lib_dir = k
+      os.execute("mkdir " .. base_dir .. "/" .. lib_dir)
+      recursiveDownload(v)
+    else
+      util.download(lib.repo, version, v, base_dir, lib_dir)
+    end
+  end
 end
 
 cli:set_name("loverboy add")
@@ -17,28 +32,22 @@ local args, err = cli:parse(arg)
 if not args and err then
   print(err .. "\n")
   os.exit(1)
-elseif args then
-  cli:print_help()
-  os.exit(0)
 end
 
 name = args["NAME"]
 search_names(name)
 
 if lib ~= nil then
-  local version = ""
+  base_dir = args["directory"]
+
   if args["version"] then
     version = args["version"]
   else
     version = lib.versions[1]
   end
 
-  print("==> Adding " .. lib.name .. " v" .. version .."...")
-
-  for _, f in ipairs(lib.files) do
-    util.download(lib.repo, version, f, args["directory"])
-  end
-
+  print("==> Adding " .. lib.name .. " (" .. version ..")...")
+  recursiveDownload(lib.files, base_dir)
   print("Done!")
 else
   print("Library '" .. name .. "' not found")

@@ -15,9 +15,6 @@ local args, err = cli:parse(arg)
 if not args and err then
   print(err .. "\n")
   os.exit(1)
-elseif args then
-  cli:print_help()
-  os.exit(0)
 end
 
 name = args["NAME"]
@@ -33,7 +30,7 @@ if lib ~= nil then
     print(lib.desc)
   end
 
-  util.print_underline(util.github_url(lib.repo))
+  util.print_underline("https://github.com/" .. lib.repo)
 
   local lvs = lib.versions
   local versions = ""

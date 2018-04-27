@@ -57,18 +57,25 @@ function util.print_color(text, colorcode)
   os.execute("echo \"" .. t .. "\"")
 end
 
-function util.download(repo, version, file, dir)
-  local uri = "https://raw.githubusercontent.com/" .. repo .. "/v" .. version .. "/" .. file
+function util.download(repo, version, file, base_dir, lib_dir)
+  local uri = "https://raw.githubusercontent.com/" .. repo .. "/" .. version .. "/" .. file
   local req = request.new_from_uri(uri)
   local headers, stream = req:go(req_timeout)
   local body, err = stream:get_body_as_string()
+  local path
+  if lib_dir == nil then
+    path = base_dir .. "/" .. file
+  else
+    path = base_dir .. "/" .. lib_dir .. "/" .. file
+  end
 
   if not body and err then
     o.stderr:write(tostring(err), "\n")
     os.exit(1)
   end
 
-  local f = assert(io.open(dir .. "/" .. file, "wb"))
+  print("  * " .. path)
+  local f = assert(io.open(path, "wb"))
   f:write(body)
   f:close()
 end
