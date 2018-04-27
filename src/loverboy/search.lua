@@ -22,9 +22,6 @@ local args, err = cli:parse(arg)
 if not args and err then
   print(err .. "\n")
   os.exit(1)
-elseif args then
-  cli:print_help()
-  os.exit(0)
 end
 
 util.print_bold("==> Searching local metafiles...")
