@@ -2,7 +2,7 @@
 
 > I learned my passion in the good old-fashioned school of lover boys
 
-Löverboy makes it easy to add Lua libraries to your LÖVE project with a simple set of commands.
+Löverboy makes it easy to add Lua libraries to your [LÖVE](https://love2d.org/) project with a simple set of commands.
 Library files are added directly to your project directory so distributing your game is a snap.
 
 ## Table of contents
