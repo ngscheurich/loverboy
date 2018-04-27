@@ -1,0 +1,4 @@
+#!/bin/sh
+
+luarocks install loverboy
+git clone https://github.com/ngscheurich/loverboy-mfiles.git ~/.local/share/loverboy
