@@ -1,7 +1,5 @@
 MFILES_PATH = os.getenv("HOME") .. "/.local/share/loverboy/mfiles"
 
-package.path = package.path .. ";src/?.lua"
-
 local cli = require "cliargs"
 local util = require "loverboy.util"
 
