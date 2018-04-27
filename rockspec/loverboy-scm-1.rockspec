@@ -18,10 +18,7 @@ description = {
 }
 
 dependencies = {
-   "lua >= 5.3",
-   "lua_cliargs ~> 3",
-   "luafilesystem ~> 1.7",
-   "http ~> 0.2"
+   "lua >= 5.3"
 }
 
 build = {
