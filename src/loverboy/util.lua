@@ -38,10 +38,6 @@ function util.mdata_with_name(name)
   return mdata
 end
 
-function util.github_url(repo)
-  return "https://github.com/" .. repo
-end
-
 function util.print_bold(text)
   local t = "\\033[1m" .. text .. "\\033[0m"
   os.execute("echo \"" .. t .. "\"")
